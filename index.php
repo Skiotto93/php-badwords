@@ -3,6 +3,8 @@
                     My cock can walk right through the door
                     With a feeling so pure
                     It's got you screaming back for";
+    $word_censure = $_GET['word'];
+    $song_text_censured = str_replace($word_censure , '***', $song_text);
 ?>
 
 <!DOCTYPE html>
@@ -21,5 +23,10 @@
                 Lunghezza testo: <?php echo strlen($song_text) ?>
             </h4>
         </div>
+        <h2>Dopo la censura:</h2>
+        <p> <?php echo $song_text_censured ?> </p>
+        <h4>
+            Lunghezza testo censurato: <?php echo strlen($song_text_censured) ?>
+        </h4>
     </body>
 </html>
